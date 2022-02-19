@@ -1,0 +1,148 @@
+@import "variables.scss";
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+html,
+body {
+	min-height: 100%;
+	position: relative;
+}
+
+body {
+	margin: 0;
+
+	font-size: 1rem;
+	line-height: 1.5;
+
+	background-color: $gray;
+}
+
+body,
+input,
+textarea,
+button {
+	font-family: "Raleway", "Areal", sans-serif;
+}
+
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+.visually-hidden {
+	position: absolute;
+
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+
+	border: 0;
+	overflow: hidden;
+
+	clip: rect(0 0 0 0);
+}
+
+.container {
+	max-width: 1170px;
+	margin: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section-title {
+	flex: 0 0 100%;
+	margin-bottom: 60px;
+	padding: 0 15px;
+
+	& h2 {
+		position: relative;
+
+		display: inline-block;
+		margin: 0;
+
+		font-size: 36px;
+		font-weight: 700;
+	}
+
+	& h2::before {
+		content: "";
+
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+
+		box-sizing: border-box;
+		width: 80px;
+		height: 3px;
+
+		background-color: $orange;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 35px;
+
+	font-size: 16px;
+	font-weight: 600;
+	color: $secondary;
+	text-decoration: none;
+	line-height: 1.5;
+
+	border: 2px solid transparent;
+	border-radius: 30px;
+	background-color: $orange;
+
+	transition: all 0.5s ease;
+	cursor: pointer;
+
+	&:hover {
+		color: $orange;
+
+		background-color: transparent;
+		border-color: $orange;
+	}
+
+	&:focus {
+		outline: none;
+	}
+}
+
+.overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	display: flex;
+	height: 100%;
+	width: 100%;
+
+	background-color: rgba(0, 0, 0, 0.6);
+
+	transition: all 0.5s ease;
+}

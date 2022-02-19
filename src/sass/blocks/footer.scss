@@ -1,0 +1,35 @@
+/* footer */
+
+.social-links {
+	flex: 0 0 100%;
+	min-width: 100%;
+	padding: 0 15px;
+
+	text-align: center;
+
+	& a {
+		display: inline-block;
+		margin: 0 5px;
+
+		text-decoration: none;
+	}
+
+	& a img {
+		width: 28px;
+		display: block;
+		transition: all 0.5s ease;
+	}
+
+	& a:hover img {
+		opacity: 0.7;
+	}
+}
+
+.copyright {
+	padding: 25px 15px;
+
+	text-align: center;
+	color: #555555;
+	font-size: 16px;
+	border-top: 1px solid #c5c5c5;
+}
